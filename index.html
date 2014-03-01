@@ -142,7 +142,6 @@
         #slide1 {
             background-color: none;
             background-image: url('http://i.imgur.com/ER901EY.jpg');
-            background-size: cover;
             background-repeat: none;
             color: #fff;
             height: 100%;
@@ -193,10 +192,12 @@
             margin-right: 350px;
         }
         .slidebreak {
-            height: 100px;
+            height: 300px;
+            background-color:#ccc;
+            background-repeat:none;
         }
         .slidebreak:nth-last-child(1) {
-            height: 150px;
+            height: 300px;
         }
         .round:hover {
             color: #fff;
@@ -221,6 +222,7 @@
             background-color: #8a8683;
             color: #ffffff;
         }
+       
         #bottomslide {
             bottom: 0;
             margin: 0;
@@ -294,8 +296,16 @@
             padding: 4px
         }
         #video {
-            margin-top:10%;
+            margin-top: 10%;
         }
+         #about-slidebreak {
+            background-image: url('http://i.imgur.com/9Gz4Sno.jpg');
+            
+        }
+        #whycouncil-slidebreak { 
+             background-image: url('http://i.imgur.com/9Gz4Sno.jpg');
+        }
+        
     </style>
 </head>
 
@@ -304,68 +314,87 @@
     <div class='slide' data-slide='1' data-stellar-background-ratio='0.5' id='slide1'>
         <div class='container clearfix'>
             <div class='center' id='main'>
-                <a href='http://ttwjistaken.blogspot.com'>
-                    <h1>
-            Bryan 2014
-          </h1>
+                <a href='#'>
+                    <h1>Bryan 2014</h1>
                 </a>
                 <p>
                     <!-- todo: find catchy caption -->
                 </p>
-                <div id="video"><iframe width="560" height="315" src="//www.youtube.com/embed/9llAukq-2D8?autoplay=1&rel=0&html5=true" frameborder="0" allowfullscreen></iframe></div>
+                <div id="video">
+                    <iframe width="560" height="315" src="//www.youtube.com/embed/9llAukq-2D8?autoplay=1&rel=0&html5=true" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <a href='#' id='scroll'>
                     <img src='https://d2c87l0yth4zbw.cloudfront.net/i/_global/arrow-big.png' />
                 </a>
-                
+
             </div>
-            
+
         </div>
     </div>
-    <div class='section' id='blog'>
-        <div class='widget BlogArchive' id='BlogArchive1'>
-        </div>
-        <div class='widget Blog' id='Blog1'>
-            <div class='slide' id='slide2'>
-                <div class='container clearfix'>
-                    <div class='grid_11 omega'>
-                        <h1>
-                            About me
-</h1>
-                    </div>
-                    <hr/>
-                    <p>
-                    </p>
-                    <div class='post-body'>
-                        Lorem Ipsum di solor amet
-                    </div>
-                </div>
+    <div class='slide' id='slide2'>
+        <div class='container clearfix'>
+            <div class='grid_11 omega'>
+                <h1>About me</h1>
             </div>
-            <div class='slide slidebreak'>
-            </div>
-            <div class='comments' id='comments'>
-                <a name='comments'></a>
-                <div id='backlinks-container'>
-                    <div id='Blog1_backlinks-container'>
-                    </div>
-                </div>
+            <hr/>
+            <div class='post-body'>
+                Lorem Ipsum di solor amet
             </div>
         </div>
     </div>
-    <div class='slide' data-slide='1' data-stellar-background-ratio='0.5' id='bottomslide'>
-        <div class='container clearfix' id='footer'>
-            <p>
-                Parallex Theme (c) ttwj 2014
-            </p>
+    <div class='slide slidebreak' id="about-slidebreak" data-slide='1' data-stellar-background-ratio='0.5'>
+    </div>
+
+
+    <div class='slide' id='slide2'>
+        <div class='container clearfix'>
+            <div class='grid_11 omega'>
+                <h1>Why Council?</h1>
+            </div>
+            <hr/>
+            <div class='post-body'>
+                Lorem Ipsum di solor amet
+            </div>
         </div>
     </div>
-<div class='slide' data-slide='1' data-stellar-background-ratio='0.5' id='slide1'>
+    
+    <div class='slide slidebreak'>
+    </div>
+
+    
+    <div class='slide' id='slide2'>
+        <div class='container clearfix'>
+            <div class='grid_11 omega'>
+                <h1>My promises</h1>
+            </div>
+            <hr/>
+            <div class='post-body'>
+                Lorem Ipsum di solor amet
+            </div>
+        </div>
+    </div>
+    
+    <div class='slide slidebreak'>
+    </div>
+
+    
+    <div class='slide' id='slide2'>
+        <div class='container clearfix'>
+            <div class='grid_11 omega'>
+                <h1>Why Bryan?</h1>
+            </div>
+            <hr/>
+            <div class='post-body'>
+                Lorem Ipsum di solor amet
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class='slide' data-slide='1' data-stellar-background-ratio='0.5' id='slide1'>
         <div class='container clearfix'>
             <div class='center' id='main'>
-                <a href='http://ttwjistaken.blogspot.com'>
-                    <h1>
-            Get in touch!
-          </h1>
-                </a>
+                <h1>Get in touch!</h1>
             </div>
             <div id="fb" class="grid_4">
                 <a href="http://google.com.sg">
