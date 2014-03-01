@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Bryan 2014
+    </title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' type='text/javascript'>
+    </script>
+    <script src='https://dl.dropboxusercontent.com/u/28996340/cool-kitten/js/jquery.stellar.min.js' type='text/javascript'>
+    </script>
+    <script src='https://dl.dropboxusercontent.com/u/28996340/cool-kitten/js/waypoints.min.js' type='text/javascript'>
+    </script>
+    <script src='https://dl.dropboxusercontent.com/u/28996340/cool-kitten/js/jquery.easing.1.3.js' type='text/javascript'>
+    </script>
+    <script src='https://dl.dropboxusercontent.com/u/28996340/cool-kitten/js/scripts.js' type='text/javascript'>
+    </script>
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content='width=device-width, initial-scale = 1.0, user-scalable = no' name='viewport' />
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet'>
+    </link>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css' />
+    <link href='https://dl.dropboxusercontent.com/u/28996340/cool-kitten/css/normalize.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='https://dl.dropboxusercontent.com/u/28996340/cool-kitten/css/grid.css' media='screen' rel='stylesheet' type='text/css' />
+    <style type='text/css'>
+        /* Global */
+        @import url(http://fonts.googleapis.com/css?family=Duru+Sans|Hammersmith+One);
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Duru Sans', sans-serif;
+        }
+        #comments {
+            display: none;
+        }
+        a {
+            -webkit-transition: all 0.25s ease-out;
+            -moz-transition: all 0.25s ease-out;
+            -ms-transition: all 0.25s ease-out;
+            -o-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+        }
+        a:link {
+            color: #f68f67;
+            text-decoration: none;
+        }
+        a:hover {
+            opacity: 0.65;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #f68f67;
+            text-decoration: none;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            color: #8a8683;
+            overflow-x: hidden;
+        }
+        #main {
+            margin-top: 6%;
+            margin-bottom: 12%;
+        }
+        #main h1 {
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: 4.5em;
+        }
+        #main a {
+            color: #eee;
+            color: rgba(255, 255, 255, 0.85);
+            -webkit-transition: all 0.3s ease-in-out;
+        }
+        #main a:hover {
+            color: #fff;
+            text-shadow: 1px 1px 10px rgba(1, 1, 1, 0.2);
+        }
+        html {
+            overflow-x: hidden;
+        }
+        .container h1 {
+            margin-top: 38px;
+            margin-bottom: 40px;
+            padding: 0;
+            margin-left: 3px;
+            font-size: 2.9em;
+            letter-spacing: -3px;
+            line-height: 0px;
+        }
+        .container hr {
+            width: 100%;
+        }
+        /* Navigation */
+        .menu {
+            position: fixed;
+            top: 0px;
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding-bottom: 5px;
+            z-index: 100;
+        }
+        #logo {
+            text-align: center;
+            margin: 10px 0;
+        }
+        #nav {
+            text-align: right;
+            margin: 30px 0 0 0;
+        }
+        .navigation {
+            float: right;
+            list-style: none;
+            margin: 0;
+        }
+        .navigation li {
+            float: left;
+            padding: 0 0 0 50px;
+        }
+        .navigation li:hover {
+            cursor: pointer;
+            color: #a9d3d0;
+        }
+        .navigation .active {
+            cursor: pointer;
+            color: #f68f67;
+            font-weight: bold;
+        }
+        /* General Slides */
+        .slide {
+            /*background-attachment: fixed;*/
+            height: auto;
+            position: relative;
+            padding: 25px 0;
+            /*background-image:url('http://cdn.cnwimg.com/wp-content/uploads/2013/03/Kim-Jong-Un.jpg');
+      background-repeat:no-repeat;*/
+        }
+        #slide1 {
+            background-color: none;
+            background-image: url('http://i.imgur.com/ER901EY.jpg');
+            background-size: cover;
+            background-repeat: none;
+            color: #fff;
+            height: 100%;
+            min-height: 100%;
+        }
+        #slide1 h1 {
+            font-size: 4.7em;
+            letter-spacing: -3px;
+            line-height: 0px;
+            font-weight: 700;
+        }
+        #slide1 h2 {
+            font-size: 2em;
+            color: #8a8683;
+            line-height: 0px;
+            padding-bottom: 20px;
+            font-weight: 400;
+        }
+        .center {
+            text-align: center;
+        }
+        /* Slide 2 */
+        #scroll {
+            position: absolute;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: 1%;
+        }
+        #scroll:hover {
+            opacity: 0.7;
+        }
+        .round {
+            background: rgba(30, 30, 30, 1);
+            opacity: 0.7;
+            border-radius: 50%;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -ms-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+            height: 100px;
+            width: 100px;
+            padding: 12px;
+            margin-left: 50px;
+            margin-right: 350px;
+        }
+        .slidebreak {
+            height: 100px;
+        }
+        .slidebreak:nth-last-child(1) {
+            height: 150px;
+        }
+        .round:hover {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.7;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        #blog {
+            margin: 0;
+            padding: 0;
+        }
+        #test {
+            background-color: #bde2df;
+            color: #ffffff;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 400;
+        }
+        /* Slide 4 */
+        #slide4 {
+            background-image: url('../images/sunglasses.png');
+            background-color: #8a8683;
+            color: #ffffff;
+        }
+        #bottomslide {
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            background-image: url('http://i.imgur.com/9Gz4Sno.jpg');
+            height: 300px;
+            background-color: #ccc;
+            background-repeat: none;
+        }
+        #footer {
+            vertical-align: bottom;
+        }
+        /* calendar */
+        .calendar {
+            width: 75px;
+            height: 70px;
+            -moz-border-radius: 24px;
+            -webkit-border-radius: 24px;
+            border-radius: 24px;
+            position: relative;
+            background: #FFF
+        }
+        .header {
+            height: 25px;
+            background: #e74c3c;
+            -webkit-border-top-right-radius: 12px;
+            -moz-border-radius-topright: 12px;
+            border-top-right-radius: 12px;
+            -webkit-border-top-left-radius: 12px;
+            -moz-border-radius-topleft: 12px;
+            border-top-left-radius: 12px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: #FFF;
+            line-height: 25px
+        }
+        .num-day {
+            height: 50px;
+            font-size: 37px;
+            color: #333;
+            background-color: #eee;
+            text-align: center
+        }
+        .header:before {
+            background-color: #333;
+            height: 1px;
+            width: 1px;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            -moz-border-radius: 12px;
+            -webkit-border-radius: 12px;
+            border-radius: 12px;
+            padding: 4px
+        }
+        .header:after {
+            background-color: #333;
+            height: 1px;
+            width: 1px;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            -moz-border-radius: 12px;
+            -webkit-border-radius: 12px;
+            border-radius: 12px;
+            padding: 4px
+        }
+        #video {
+            margin-top:10%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div class="menu"> <div class="container clearfix"> <div id="logo" class="grid_3">wow</div> <div id="nav" class="grid_9 omega"> <ul class="navigation"> <li data-slide="1">About</li> </ul> </div> </div> </div>-->
+    <div class='slide' data-slide='1' data-stellar-background-ratio='0.5' id='slide1'>
+        <div class='container clearfix'>
+            <div class='center' id='main'>
+                <a href='http://ttwjistaken.blogspot.com'>
+                    <h1>
+            Bryan 2014
+          </h1>
+                </a>
+                <p>
+                    <!-- todo: find catchy caption -->
+                </p>
+                <div id="video"><iframe width="560" height="315" src="//www.youtube.com/embed/9llAukq-2D8?autoplay=1&rel=0&html5=true" frameborder="0" allowfullscreen></iframe></div>
+                <a href='#' id='scroll'>
+                    <img src='https://d2c87l0yth4zbw.cloudfront.net/i/_global/arrow-big.png' />
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class='section' id='blog'>
+        <div class='widget BlogArchive' id='BlogArchive1'>
+        </div>
+        <div class='widget Blog' id='Blog1'>
+            <div class='slide' id='slide2'>
+                <div class='container clearfix'>
+                    <div class='date grid_1'>
+                        <script>
+                            replace_date('Saturday, February 8, 2014');
+                        </script>
+                    </div>
+                    <div class='grid_11 omega'>
+                        <h1>
+<a href='http://ttwjistaken.blogspot.sg/2014/02/origins-of-blog.html'>
+Origins of Blog
+</a>
+</h1>
+                    </div>
+                    <hr/>
+                    <p>
+                    </p>
+                    <div class='post-body'>
+                        <a class='read_more_url' href='http://ttwjistaken.blogspot.sg/2014/02/origins-of-blog.html'>
+                        </a>
+                        wow such test post
+                    </div>
+                </div>
+            </div>
+            <div class='slide slidebreak'>
+            </div>
+            <div class='comments' id='comments'>
+                <a name='comments'></a>
+                <div id='backlinks-container'>
+                    <div id='Blog1_backlinks-container'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='slide' data-slide='1' data-stellar-background-ratio='0.5' id='bottomslide'>
+        <div class='container clearfix' id='footer'>
+            <p>
+                Parallex Theme (c) ttwj 2014
+            </p>
+        </div>
+    </div>
+<div class='slide' data-slide='1' data-stellar-background-ratio='0.5' id='slide1'>
+        <div class='container clearfix'>
+            <div class='center' id='main'>
+                <a href='http://ttwjistaken.blogspot.com'>
+                    <h1>
+            Get in touch!
+          </h1>
+                </a>
+            </div>
+            <div id="fb" class="grid_4">
+                <a href="http://google.com.sg">
+                    <img class="round" src="https://dl.dropboxusercontent.com/u/28996340/cool-kitten/images/fb.png"></img>
+                </a>
+            </div>
+            <div id="twitter" class="grid_4">
+                <img class="round" src="https://dl.dropboxusercontent.com/u/28996340/cool-kitten/images/twitter.png"></img>
+            </div>
+            <div id="youtube" class="grid_4 omega">
+                <img class="round" src="https://dl.dropboxusercontent.com/u/28996340/cool-kitten/images/youtube.png"></img>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
